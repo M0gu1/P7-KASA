@@ -1,6 +1,6 @@
-import './_card.scss'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import '../styles/components/_card.scss';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Voir comment gérer l'id !!
 function Card({ id, title, cover }) {

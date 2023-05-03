@@ -1,11 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Banner from '../components/Banner';
+import Header from '../components/Header';
 
 const FicheLogement = () => {
     return (
         <div>
-            <Banner />
+            <Header />
             <Navigation />
             <h1>Fiche logement</h1>
         </div>

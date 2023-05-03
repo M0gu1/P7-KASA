@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 import Apropos from './pages/Apropos';
 import Erreur404 from './pages/Erreur404';
 import FicheLogement from './pages/FicheLogement';
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/a_propos" element={<Apropos />} />
         <Route path="/fiche_logement" element={<FicheLogement />} />
+        <Route path="/footer" element={<Footer />} />
         { /* path="*" fonctionne si jamais l'URL ne correspond à rien de déclaré au dessus */}
         <Route path="/*" element={<Erreur404 />} />
       </Routes>

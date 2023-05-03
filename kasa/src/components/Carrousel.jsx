@@ -1,5 +1,5 @@
-import '../styles/components/_gallery.scss'
-import { useState } from 'react'
+import '../styles/components/_carrousel.scss';
+import { useState } from 'react';
 
 // A compléter pour gestion des slides !!
 function Slider({ imageSlider }) {

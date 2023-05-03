@@ -1,11 +1,11 @@
 import React from 'react';
-import Banner from '../components/Banner';
+import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 
 const Apropos = () => {
     return (
         <div>
-            <Banner />
+            <Header />
             <Navigation />
             <h1>A propos</h1>
             <br />

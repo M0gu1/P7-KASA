@@ -1,14 +1,19 @@
 import React from 'react';
-import Banner from '../components/Banner';
 import Navigation from '../components/Navigation';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Erreur404 = () => {
     return (
-        <div>
-            <Banner />
+        <div className='notFound'>
+			<Header />
             <Navigation />
-            <h1>Erreur 404</h1>
-        </div>
+			<div className="notFound_infos">
+				<h1 className='notFound_infos_title'>404</h1>
+				<p className='notFound_infos_content'>La page que vous recherchez n'existe pas.</p>
+			</div>
+				<Link className='notFound_infos_return' to='/'>Retourner sur la page d'accueil</Link>
+		</div>
     );
 };
 
