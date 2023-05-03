@@ -1,11 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Footer from './components/Footer';
-import Apropos from './pages/Apropos';
-import Erreur404 from './pages/Erreur404';
-import FicheLogement from './pages/FicheLogement';
-import Home from './pages/Home';
 
+import {Footer, Apropos, Erreur404, FicheLogement, Home} from './'
 
 const App = () => {
   return (

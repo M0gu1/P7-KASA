@@ -1,0 +1,29 @@
+@import '../mixin/mixin';
+@import '../variables/variables';
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    color: $secondary;
+    font-size: 24px;
+    width: 90%;
+
+    @media screen and (max-width: 700px) {
+        gap: 20px;
+    }
+}
+
+.nav {
+    display: flex;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 54px;
+
+        :hover {
+            text-decoration: underline;
+
+        }
+    }
+}

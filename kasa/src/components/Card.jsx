@@ -1,5 +1,4 @@
 import '../styles/components/_card.scss';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Voir comment gérer l'id !!

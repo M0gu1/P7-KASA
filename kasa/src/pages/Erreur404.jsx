@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Header from '../components/Header'
+import '../styles/components/_erreur404.scss'
 
 const Erreur404 = () => {
     return (
-        <div className='notFound'>
+        <div className='erreur'>
 			<Header />
-            <Navigation />
-			<div className="notFound_infos">
-				<h1 className='notFound_infos_title'>404</h1>
-				<p className='notFound_infos_content'>La page que vous recherchez n'existe pas.</p>
+			<div className="erreur_infos">
+				<h1 className='erreur_infos_title'>404</h1>
+				<p className='erreur_infos_content'>Oups! La page que vous demandez n'existe pas.</p>
 			</div>
-				<Link className='notFound_infos_return' to='/'>Retourner sur la page d'accueil</Link>
+				<Link className='erreur_infos_return' to='/'>Retourner sur la page d'accueil</Link>
 		</div>
     );
 };

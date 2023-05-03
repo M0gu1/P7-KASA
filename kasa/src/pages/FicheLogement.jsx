@@ -1,13 +1,13 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Header from '../components/Header';
+import React from 'react'
+import Header from '../components/Header'
+import Footer from './Footer'
 
 const FicheLogement = () => {
     return (
         <div>
             <Header />
-            <Navigation />
             <h1>Fiche logement</h1>
+            <Footer />
         </div>
     );
 };

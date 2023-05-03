@@ -1,7 +1,7 @@
 @import '../mixin/mixin';
 @import '../variables/variables';
 
-.banner {
+.banner-container {
     position: relative;
     @include flex;
     border-radius: 25px;
@@ -34,10 +34,10 @@
             height: 120px;
         }
     }
+}
 
-    p {
-        color: $primary;
-        font-size: clamp(20px, 4vw, 48px);
-        font-weight: 500;
-    }
+.banner-text {
+    color: $primary;
+    font-size: clamp(20px, 4vw, 48px);
+    font-weight: 500;
 }
