@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
+import Card from '../components/Card'
 
 const FicheLogement = () => {
     return (
         <div>
             <Header />
-            <h1>Fiche logement</h1>
+            <Card />
         </div>
     );
 };

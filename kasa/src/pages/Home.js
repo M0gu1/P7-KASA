@@ -1,6 +1,6 @@
 import React from 'react'
-import AccomodationsList from '../components/AccomodationsList'
 import Banner from '../components/Banner'
+import Gallery from '../components/Gallery';
 import Header from '../components/Header'
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
         <div>
             <Header />
             <Banner />
-            <AccomodationsList />
+            <Gallery />
         </div>
     );
 };

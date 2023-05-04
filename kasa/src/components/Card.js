@@ -1,20 +1,13 @@
 import '../styles/components/_card.scss';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-// Voir comment gérer l'id !!
-function Card({ id, title, cover }) {
+function Card({id,title, cover }) {
     return (
-        <div>
+        <Link to={`/accomodation/${id}`} className="gallery_card">
             <img src={cover} alt={title} />
             <h3>{title}</h3>
-        </div>
+        </Link>
     )
-}
-
-Card.PropTypes = {
-    id: PropTypes.number,
-    title: PropTypes.string,
-    cover: PropTypes.string,
 }
 
 export default Card
