@@ -2,7 +2,9 @@ $primary : #fff;
 $secondary : #FF6060;
 $tertiary : #F7F7F7;
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,20 +12,24 @@ $tertiary : #F7F7F7;
     font-style: normal;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-li{
+li {
     list-style: none;
 }
 
-body{
+body {
     max-width: 1440px;
-    padding: 45px;
     margin: 0 auto;
+
     @media screen and (max-width: 500px) {
         padding-top: 20px;
     }
+}
+
+.content-wrap {
+    padding: 45px;
 }

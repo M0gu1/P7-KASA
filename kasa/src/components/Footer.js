@@ -1,7 +1,8 @@
 import '../styles/components/_footer.scss'
 import logo from '../assets/logo_kasa_white.png'
+import React from 'react'
 
-function Footer() {
+const Footer = () => {
 	return (
 		<footer className='footer'>
 			<img src={logo} alt="logo Kasa" />
@@ -9,4 +10,5 @@ function Footer() {
 		</footer>
 	)
 }
+
 export default Footer
