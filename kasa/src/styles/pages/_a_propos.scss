@@ -1,13 +1,2 @@
 @import '../mixin/mixin';
 @import '../variables/variables';
-
-.a_propos{
-    width: 95%;
-    margin: 0 auto;
-    &_collapse{
-        margin: 40px auto;
-        @media screen and (max-width: 550px){
-            margin: 20px auto;
-        }
-    }
-}
