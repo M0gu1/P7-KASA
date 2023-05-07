@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Header from '../components/Header'
+import Collapse from '../components/Collapse'
 
 const Apropos = () => {
     const [Datas] = useState(
@@ -8,7 +9,7 @@ const Apropos = () => {
             {
                 "id": "1",
                 "title": "Fiabilité",
-                "content": "...",
+                "content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
             },
             {
                 "id": "2",
@@ -18,36 +19,33 @@ const Apropos = () => {
             {
                 "id": "3",
                 "title": "Service",
-                "content": "..."
+                "content": "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
             },
             {
                 "id": "4",
                 "title": "Sécurité",
-                "content": "..."
+                "content": "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
             }
         ]
-    );
+    )
 
     return (
         <div>
-        <Header />
-        <div className='a_propos_datas'>
-            
-            <table>
-                <tbody className='a_propos_datas_table'>
-                    {
-                        Datas.map(data => (
-                            <tr>
-                                <td>{data.title}</td>
-                                <td>{data.content}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+            <Header />
+            <div className='a_propos_datas'>
+                {Datas.map((data,i) => {
+                    return (
+                        <Collapse
+                            key={data.id}
+                            id={data.id}
+                            title={data.title}
+                            cover={data.content}
+                        />
+                    )
+                })}
+            </div>
         </div>
-        </div>
-    );
-};
+    )
+}
 
 export default Apropos
