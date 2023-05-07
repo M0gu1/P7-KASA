@@ -2,7 +2,7 @@ import '../styles/components/_collapse.scss'
 import arrow from '../assets/dropdown-up-arrow.png';
 import { useState } from 'react';
 
-export default function Collapse({ title, content }) {
+function Collapse({ title, content }) {
 
     const [toggle, setToggle] = useState(false);
 
@@ -29,3 +29,5 @@ export default function Collapse({ title, content }) {
         </>
     )
 }
+
+export default Collapse

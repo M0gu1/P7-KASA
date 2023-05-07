@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Header from '../components/Header'
 import Collapse from '../components/Collapse'
+import BannerAbout from '../components/BannerAbout'
 
 const Apropos = () => {
     const [Datas] = useState(
@@ -32,14 +33,15 @@ const Apropos = () => {
     return (
         <div>
             <Header />
+            <BannerAbout />
             <div className='a_propos_datas'>
-                {Datas.map((data,i) => {
+                {Datas.map((data) => {
                     return (
                         <Collapse
                             key={data.id}
                             id={data.id}
                             title={data.title}
-                            cover={data.content}
+                            content={data.content}
                         />
                     )
                 })}

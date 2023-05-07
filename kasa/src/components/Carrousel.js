@@ -1,5 +1,7 @@
 import '../styles/components/_carrousel.scss';
 import { useState } from 'react';
+import ArrowRight from '../assets/right_arrow.png';
+import ArrowLeft from '../assets/left_arrow.png';
 
 // A compléter pour gestion des slides !!
 function Slider({ imageSlider }) {
@@ -18,7 +20,7 @@ function Slider({ imageSlider }) {
             galleryNext(imageSlider.length - 1)
     }
     return (
-        <section style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className='carousel'>
+        <section style={{backgroundImage : `url(${imageSlider[galleryState]})`}} className='carrousel'>
             {imageSlider.length > 1 && 
                 <>
                     <img 
@@ -33,7 +35,7 @@ function Slider({ imageSlider }) {
                         alt="show previous slider" 
                         onClick={prevSlide}
                     />
-                    <p className='slideCount'>{currentIndex + 1} / {imageSlider.length}</p>
+                    <p className='slideCount'>{galleryState + 1} / {imageSlider.length}</p>
                 </>
             } 
         </section>
