@@ -5,6 +5,7 @@ import Card from './Card';
 function Gallery() {
 
     return (
+        // affichage des Card dans la Home gallery avec les infos de data.js
         <main className='home_gallery'>
             {data.map(data => {
                 return (

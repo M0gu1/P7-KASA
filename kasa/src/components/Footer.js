@@ -4,6 +4,7 @@ import React from 'react'
 
 const Footer = () => {
 	return (
+	// affichage du logo et des informations du footer
 		<footer className='footer'>
 			<img src={logo} alt="logo Kasa" />
 			<p className='footer_copyright'>© 2020 Kasa. All rights reserved</p>

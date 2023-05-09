@@ -10,8 +10,11 @@ const App = () => {
       <div className='page-container'>
         <div className='content-wrap'>
           <Routes>
+          { /* renvoie sur la home */}
             <Route path="/" element={<Home />} />
+            { /* renvoie sur la page a propos */}
             <Route path="/a_propos" element={<Apropos />} />
+            { /* renvoie sur la page fiche logement */}
             <Route path="/fiche_logement" element={<FicheLogement />} />
             { /* path="*" fonctionne si jamais l'URL ne correspond à rien de déclaré au dessus */}
             <Route path="/*" element={<Erreur404 />} />

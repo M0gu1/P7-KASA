@@ -6,6 +6,7 @@ import Header from '../components/Header'
 const Home = () => {
     return (
         <div>
+            {/* affichage du header, du banner et de la gallery sur la home */}
             <Header />
             <Banner />
             <Gallery />

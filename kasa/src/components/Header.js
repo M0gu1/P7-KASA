@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 
 const Header = () => {
     return (
+        // affichage du logo en h1 et du menu
             <header className='header'>
                 {/* Les images importées depuis la balise img sont accessibles dans "public" */}
                 <h1>

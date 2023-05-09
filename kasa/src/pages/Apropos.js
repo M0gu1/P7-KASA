@@ -32,6 +32,7 @@ const Apropos = () => {
 
     return (
         <div>
+            {/* affichage du header, du bannerabout, et du collapse avec les infos de data.js sur la page A propos */}
             <Header />
             <BannerAbout />
             <div className='a_propos_datas'>
