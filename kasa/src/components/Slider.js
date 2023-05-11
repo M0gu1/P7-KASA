@@ -19,11 +19,12 @@ function Slider({ images }) {
     }
 
     const previousSlide = () => {
-        // si au click on n'est pas sur la dernière image, on recule d'une
+        // si au click on n'est pas sur la dernière image, on recule d'une 
+        setSlideIndex(slideIndex - 1)
         if (slideIndex !== 1) {
             setSlideIndex(slideIndex - 1)
         }
-        // si au click on se situe sur la dernière slide, on revient à la première image
+        // si au click on se situe sur la dernière slide, on revient à la première image 
         else if (slideIndex === 1) {
             setSlideIndex(images.length)
         }
@@ -35,17 +36,13 @@ function Slider({ images }) {
                 <div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
                     {console.log(data)}
                     <img
-                        src={data}
+                        src={images[slideIndex]}
                         alt="Apparence du logement"
                     />
-                    {/* affichage des infos de data.js sur la page */}
-                    <p>
-                        { /* infos data.js à renseigner */}
-                    </p>
-
                 </div>
             ))}
-            {/* gestion de la pagination des images*/}
+
+            {/*  gestion de la pagination des images */}
             <div className='container-pagination'>
                 {slideIndex}/{images.length}
             </div>

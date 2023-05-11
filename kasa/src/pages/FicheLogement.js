@@ -7,6 +7,7 @@ import red_star from '../assets/red_star.png'
 import grey_star from '../assets/grey_star.png'
 import Collapse from '../components/Collapse';
 import '../styles/pages/_fiche_logement.scss'
+//import slideIndex from '../components/Slider';
 
 const FicheLogement = () => {
 
@@ -28,6 +29,7 @@ const FicheLogement = () => {
     const equipments = accomodation.equipments;
     const rating = accomodation.rating;
 
+
     return (
         <div>
             {/* affichage du header et du slider  sur la page fiche logement */}
@@ -45,7 +47,7 @@ const FicheLogement = () => {
                             {/* map pour récupérer les tags */}
                             {accomodation.tags.map((tag, index) => {
                                 return (
-                                    <button key={index}>{tag}</button>
+                                    <button key={index} disabled="disabled">{tag} </button>
                                 )
                             })}
                         </div>
@@ -56,14 +58,14 @@ const FicheLogement = () => {
                         <div className='accomodation_content_host_name'>
                             <h3>{accomodation.host.name}</h3>
                         </div>
-                        <img src={accomodation.host.picture} alt="host of this accomodation" />
+                        <img src={accomodation.host.picture} alt="Hôte de ce logement" />
                     </div>
                     <div className="accomodation_content_host_stars">
                         {/* création map sous un array pour affichage des étoiles */}
-                        {[...Array(5)].map((star, index) => {
+                        {[...Array(5)].map((_star, index) => {
                             const ratingValue = index + 1;
                             return (
-                                <img key={index} src={ratingValue <= rating ? red_star : grey_star} alt="star" />
+                                <img key={index} src={ratingValue <= rating ? red_star : grey_star} alt="évaluation" />
                             )
                         })}
                     </div>

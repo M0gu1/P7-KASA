@@ -1,3 +1,8 @@
+@import '../mixin/mixin';
+@import '../variables/variables';
+
 .active-anim {
     opacity: 1;
 }
+
+// .container-pagination { position: asbolute; color: $primary; } //
