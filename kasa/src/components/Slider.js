@@ -32,15 +32,13 @@ function Slider({ images }) {
 
     return (
         <div className='container-slider'>
-            {images.map((data, index) => (
-                <div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-                    {console.log(data)}
-                    <img
-                        src={images[slideIndex]}
-                        alt="Apparence du logement"
-                    />
-                </div>
-            ))}
+            <div key={slideIndex} className={slideIndex === slideIndex + 1 ? "slide active-anim" : "slide"}>
+                <img
+                    src={images[slideIndex]}
+                    alt="Apparence du logement"
+                    onClick={nextSlide}
+                />
+            </div>
 
             {/*  gestion de la pagination des images */}
             <div className='container-pagination'>
