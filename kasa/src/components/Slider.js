@@ -20,7 +20,6 @@ function Slider({ images }) {
 
     const previousSlide = () => {
         // si au click on n'est pas sur la dernière image, on recule d'une 
-        setSlideIndex(slideIndex - 1)
         if (slideIndex !== 1) {
             setSlideIndex(slideIndex - 1)
         }
@@ -32,7 +31,7 @@ function Slider({ images }) {
 
     return (
         <div className='container-slider'>
-            <div key={slideIndex} className={slideIndex === slideIndex + 1 ? "slide active-anim" : "slide"}>
+            <div className={slideIndex === slideIndex + 1 ? "slide active-anim" : "slide"}>
                 <img
                     src={images[slideIndex]}
                     alt="Apparence du logement"
@@ -45,9 +44,11 @@ function Slider({ images }) {
                 {slideIndex}/{images.length}
             </div>
             {/* affichage des flèches */}
-            <BtnSLider moveSlide={previousSlide} direction={"previous"} />
-            <BtnSLider moveSlide={nextSlide} direction={"next"} />
-        </div>
+            <div className="arrow">
+                <BtnSLider moveSlide={previousSlide} direction={"previous"} />
+                <BtnSLider moveSlide={nextSlide} direction={"next"} />
+            </div>
+        </div >
     );
 };
 export default Slider

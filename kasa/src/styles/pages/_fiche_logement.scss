@@ -13,7 +13,6 @@
     button {
         color: $primary;
         background-color: $secondary;
-        width: 30%;
         padding: 4px;
         border-radius: 10px;
         border-color: $secondary;
@@ -37,11 +36,13 @@
             gap: 10px;
             font-weight: 500;
             font-size: 20px;
+            width: 70%;
 
             div {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
+                max-width: 50%;
             }
         }
 
