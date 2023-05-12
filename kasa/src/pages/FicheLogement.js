@@ -7,28 +7,32 @@ import red_star from '../assets/red_star.png'
 import grey_star from '../assets/grey_star.png'
 import Collapse from '../components/Collapse';
 import '../styles/pages/_fiche_logement.scss'
+import Erreur404 from './Erreur404';
 //import slideIndex from '../components/Slider';
 
 const FicheLogement = () => {
 
     const [accomodation, setAccomodation] = useState(1)
     const [load, setLoad] = useState(false)
+    const [error, setError] = useState(false)
 
     const { id } = useParams()
 
     useEffect(() => {
+        console.log(data.filter((appart) => appart.id === id)[0]);
         setAccomodation(data.filter((appart) => appart.id === id)[0])
         setLoad(true)
+        // gestion erreur id logement
+        if (data.filter((appart) => appart.id === id)[0] === undefined) {
+            setError(true)
+        }
+
         // eslint-disable-next-line
     }, [])
 
     // mise en attente
     if (!load) { return <div>loading</div> }
-
-    const description = accomodation.description;
-    const equipments = accomodation.equipments;
-    const rating = accomodation.rating;
-
+    if (error) { return <Erreur404 /> }
 
     return (
         <div>
@@ -65,7 +69,7 @@ const FicheLogement = () => {
                         {[...Array(5)].map((_star, index) => {
                             const ratingValue = index + 1;
                             return (
-                                <img key={index} src={ratingValue <= rating ? red_star : grey_star} alt="évaluation" />
+                                <img key={index} src={ratingValue <= accomodation.rating ? red_star : grey_star} alt="évaluation" />
                             )
                         })}
                     </div>
@@ -74,10 +78,10 @@ const FicheLogement = () => {
             <div className="accomodation_collapse">
                 <div className="accomodation_collapse_item">
                     {/* import de Collapse pour description et équipements */}
-                    <Collapse title={'Description'} content={description} />
+                    <Collapse title={'Description'} content={accomodation.description} />
                 </div>
                 <div className="accomodation_collapse_item">
-                    <Collapse title={'Équipements'} content={equipments} />
+                    <Collapse title={'Équipements'} content={accomodation.equipments} />
                 </div>
             </div>
         </div>

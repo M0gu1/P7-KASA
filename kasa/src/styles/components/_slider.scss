@@ -33,25 +33,21 @@
 }
 
 .btn-slide.previous {
-    img {
-        position: absolute;
-        top: 29%;
-        height: 9%;
-        left: 7%;
-        cursor: pointer;
-        width: 4%;
-    }
+    position: absolute;
+    top: 29%;
+    height: 9%;
+    left: 7%;
+    cursor: pointer;
+    width: 4%;
 }
 
 .btn-slide.next {
-    img {
-        position: absolute;
-        top: 29%;
-        height: 9%;
-        right: 8%;
-        cursor: pointer;
-        width: 4%;
-    }
+    position: absolute;
+    top: 29%;
+    height: 9%;
+    right: 8%;
+    cursor: pointer;
+    width: 4%;
 }
 
 
@@ -62,4 +58,8 @@
     color: $primary;
     font-weight: 500;
     font-size: 18px;
+}
+
+.hidding-buttons {
+    visibility: hidden;
 }
