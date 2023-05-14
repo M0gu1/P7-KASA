@@ -21,6 +21,17 @@
         align-items: center;
         gap: 54px;
 
+        @media screen and (max-width: 425px) {
+            gap: 18px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 375px) {
+            gap: 20px;
+            font-size: 15px;
+        }
+
         :hover {
             text-decoration: underline;
         }

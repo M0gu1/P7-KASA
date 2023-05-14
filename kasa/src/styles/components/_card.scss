@@ -1,7 +1,7 @@
 @import '../mixin/mixin';
 @import '../variables/variables';
 
-.gallery_card{
+.gallery_card {
     position: relative;
     width: 30%;
     height: 340px;
@@ -9,15 +9,18 @@
     cursor: pointer;
     overflow: hidden;
 
-    @media screen and (max-width: 1230px){
-        width: 47%;   
+    @media screen and (max-width: 1230px) {
+        width: 47%;
     }
-    @media screen and (max-width: 900px){
-        width: 100%;    
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
     }
-    @media screen and (max-width: 500px){
+
+    @media screen and (max-width: 500px) {
         height: 200px;
     }
+
     &::after {
         content: '';
         z-index: 10;
@@ -45,5 +48,13 @@
         font-weight: 500;
         font-size: 18px;
         color: $primary;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: 425px) {
+            font-size: 15px;
+        }
     }
 }

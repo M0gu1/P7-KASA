@@ -13,7 +13,10 @@
     max-width: 95%;
     margin: 43px auto;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 425px) {
         margin: 20px auto;
-        height: 120px;
-    }}
+        height: 193px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}

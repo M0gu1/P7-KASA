@@ -11,6 +11,10 @@
     &_copyright {
         color: $primary;
     }
+
+    @media screen and (max-width: 375px) {
+        gap: 35px;
+    }
 }
 
 .page-container {

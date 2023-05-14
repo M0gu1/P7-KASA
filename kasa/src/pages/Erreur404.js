@@ -9,7 +9,7 @@ const Erreur404 = () => {
 			<Header />
 			<div className="erreur_infos">
 				<h1 className='erreur_infos_title'>404</h1>
-				<p className='erreur_infos_content'>Oups! La page que vous demandez n'existe pas.</p>
+				<span className='erreur_infos_content'>Oups! La page que vous demandez n'existe pas.</span>
 			</div>
 				<Link className='erreur_infos_return' to='/'>Retourner sur la page d'accueil</Link>
 		</div>

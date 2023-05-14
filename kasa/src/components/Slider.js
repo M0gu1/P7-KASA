@@ -39,11 +39,11 @@ function Slider({ images }) {
             </div>
 
             {/*  gestion de la pagination des images */}
-            <div className='container-pagination'>
+            <div className={images.length === 1 ? "hidding-pagination" : 'container-pagination'}>
                 {slideIndex + 1}/{images.length}
             </div>
             {/* affichage des flèches */}
-            <div className={images.length === 1 ? "hidding-buttons" : "arrow"}>
+            <div className={images.length === 1 ? "hidding-buttons" : "container-arrows"}>
                 <BtnSLider moveSlide={previousSlide} direction={"previous"} />
                 <BtnSLider moveSlide={nextSlide} direction={"next"} />
             </div>

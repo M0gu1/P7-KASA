@@ -15,8 +15,14 @@
     font-weight: 700;
     font-size: 288px;
 
-    @media screen and (max-width: 768px) {
-        font-size: 140px;
+    span {
+        @media screen and (max-width: 425px) {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 99px;
     }
 }
 
@@ -24,6 +30,11 @@
     font-weight: 500;
     font-size: 36px;
     text-align: center;
+
+    @media screen and (max-width: 425px) {
+        font-size: 19px;
+        max-width: 73%;
+    }
 }
 
 .erreur_infos_return {
