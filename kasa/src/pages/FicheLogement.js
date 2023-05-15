@@ -8,7 +8,6 @@ import grey_star from '../assets/grey_star.png'
 import Collapse from '../components/Collapse';
 import '../styles/pages/_fiche_logement.scss'
 import Erreur404 from './Erreur404';
-//import slideIndex from '../components/Slider';
 
 const FicheLogement = () => {
 
@@ -19,7 +18,6 @@ const FicheLogement = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        console.log(data.filter((appart) => appart.id === id)[0]);
         setAccomodation(data.filter((appart) => appart.id === id)[0])
         setLoad(true)
         // gestion erreur id logement

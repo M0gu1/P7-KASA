@@ -4,7 +4,6 @@ import leftArrow from '../assets/left_arrow.png';
 
 
 function BtnSLider({ direction, moveSlide }) {
-    console.log(direction, moveSlide);
     return (
         // on regarde la direction du bouton selon ce qui est mentionné dans Slider.js, si c'est next on affiche la flèche droite sinon la gauche.
         <button onClick={moveSlide} className={direction === "next" ? 'btn-slide next' : "btn-slide previous"}>

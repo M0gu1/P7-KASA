@@ -15,12 +15,6 @@
     font-weight: 700;
     font-size: 288px;
 
-    span {
-        @media screen and (max-width: 425px) {
-            display: block;
-        }
-    }
-
     @media screen and (max-width: 425px) {
         font-size: 99px;
     }
@@ -31,9 +25,14 @@
     font-size: 36px;
     text-align: center;
 
+    span {
+        @media screen and (max-width: 425px) {
+            display: block;
+        }
+    }
+
     @media screen and (max-width: 425px) {
         font-size: 19px;
-        max-width: 73%;
     }
 }
 
